@@ -57,6 +57,8 @@ export type Features = {
     aboutUs?: boolean;
     // PDF report. Requires the backend plugin to implement a GET /report endpoint.
     reports?: boolean;
+    // Glossary page. Requires the frontend to ship glossary content.
+    glossary?: boolean;
 };
 
 export type DeploymentConfig = {
