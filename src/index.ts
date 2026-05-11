@@ -9,6 +9,7 @@ export type StaticImageAsset = {
 
 export type State = {
     name: string;
+    // Must match a Geography's slug in the backend.
     slug: string;
     // Icon shown on the state card in the Analytics Dashboard carousel.
     icon: StaticImageAsset;
