@@ -7,6 +7,18 @@ export type StaticImageAsset = {
     height: number;
 };
 
+// Hazard types supported by the platform.
+export type HazardType = "flood" | "heat";
+
+// A module is a collection of hazard-specific data and tools.
+export type Module = {
+    name: HazardType;
+    slug: string;
+    icon: StaticImageAsset;
+    status: "active" | "inactive";
+    withSubDistrictSupport: boolean;
+};
+
 export type State = {
     name: string;
     // Must match a Geography's slug in the backend.
@@ -16,6 +28,8 @@ export type State = {
     status: "active" | "inactive";
     // GeoJSON loader rendered as an overlay on this state's analytics map.
     overlay?: () => Promise<{ default: unknown }>;
+    // Hazard Modules available for this state.
+    modules: Module[];
     // Fallback Leaflet zoom level for the state's analytics map.
     zoom?: number;
     // Minimum/maximum allowed zoom level for the state's analytics map.
