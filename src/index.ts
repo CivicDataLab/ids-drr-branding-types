@@ -12,8 +12,8 @@ export type HazardType = "flood" | "heat";
 
 // A module is a collection of hazard-specific data and tools.
 export type Module = {
-    name: HazardType;
-    slug: string;
+    name: string;
+    slug: HazardType;
     icon: StaticImageAsset;
     status: "active" | "inactive";
     withSubDistrictSupport: boolean;
