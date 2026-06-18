@@ -68,6 +68,8 @@ export type Features = {
     aboutUs?: boolean;
     // PDF report. Requires the backend plugin to implement a GET /report endpoint.
     reports?: boolean;
+    // Privacy Policy page. Requires the branding package to export a `PrivacyPolicy` component.
+    privacyPolicy?: boolean;
 };
 
 export type GlossaryTerm = {
