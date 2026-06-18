@@ -57,7 +57,7 @@ Exported types:
 - `Features`
 - `GlossaryTerm`
 - `DeploymentConfig` — main configuration object (`config` in `Exports`)
-- `Exports` — required `config` plus optional React components: `AboutPage`, `IntroSection`, `OutroSection`, `Footer`, `Credits`, `PartnerLogos`
+- `Exports` — required `config` plus optional React components: `AboutPage`, `IntroSection`, `OutroSection`, `Footer`, `Credits`, `PartnerLogos`, `PrivacyPolicy`
 
 ## License
 
