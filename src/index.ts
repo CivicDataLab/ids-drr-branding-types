@@ -161,6 +161,7 @@ export type Exports = {
     IntroSection?: ComponentType;
     OutroSection?: ComponentType;
     Footer?: ComponentType;
+    PrivacyPolicy?: ComponentType;
     Credits?: ComponentType;
     PartnerLogos?: ComponentType;
 };
