@@ -7,18 +7,17 @@ export type StaticImageAsset = {
     height: number;
 };
 
-export type HazardType = "flood" | "heat";
-
 export type Status = "active" | "inactive";
 
 // A module is a collection of hazard-specific data and tools.
 export type Module = {
     name: string;
-    slug: HazardType;
+    slug: string;
     icon: StaticImageAsset;
     status: Status;
     withSubDistrictSupport: boolean;
     description: string;
+    rootIndicatorSlug?: string;
 };
 
 export type State = {
