@@ -17,6 +17,7 @@ export type Module = {
     icon: StaticImageAsset;
     status: "active" | "inactive";
     withSubDistrictSupport: boolean;
+    description: string;
 };
 
 export type State = {
