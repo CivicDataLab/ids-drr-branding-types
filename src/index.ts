@@ -123,6 +123,9 @@ export type DeploymentConfig = {
     // Site logo shown in the header. Pass a TS-imported asset directly
     // (e.g. `import logo from './logo.png'). Undefined hides the logo.
     logo?: StaticImageAsset;
+    // Site logo shown in the header in dark. Pass a TS-imported asset directly
+    // (e.g. `import darkLogo from './dark-logo.png'). Undefined hides the logo.
+    darkLogo?: StaticImageAsset;
     // Foreground image used by the default `IntroSection` (a hero).
     // Pass a TS-imported asset directly.
     // Ignored if the branding package exports its own `IntroSection` component.
