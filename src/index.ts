@@ -7,15 +7,35 @@ export type StaticImageAsset = {
     height: number;
 };
 
+export type Status = "active" | "inactive";
+
+// A module is a collection of hazard-specific data and tools.
+export type Module = {
+    name: string;
+    // Must match a module slug served by the backend.
+    slug: string;
+    icon: StaticImageAsset;
+    // Accent color for this module's label on the home-page state cards.
+    // Optional; the label inherits the default text color when unset.
+    color?: string;
+    status: Status;
+    withSubDistrictSupport: boolean;
+    description: string;
+    rootIndicatorSlug?: string;
+};
+
 export type State = {
     name: string;
     // Must match a Geography's slug in the backend.
     slug: string;
     // Icon shown on the state card in the Analytics Dashboard carousel.
     icon: StaticImageAsset;
-    status: "active" | "inactive";
+    status: Status;
     // GeoJSON loader rendered as an overlay on this state's analytics map.
     overlay?: () => Promise<{ default: unknown }>;
+    // Presentation for this state's hazard modules, keyed by slug.
+    // Optional: which modules a state has is determined by the backend.
+    modules?: Module[];
     // Fallback Leaflet zoom level for the state's analytics map.
     zoom?: number;
     // Minimum/maximum allowed zoom level for the state's analytics map.
