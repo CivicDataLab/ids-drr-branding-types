@@ -9,7 +9,7 @@ export type StaticImageAsset = {
 
 export type Status = "active" | "inactive";
 
-export type AnalyticsView = 'map' | 'chart' | 'table';
+export type AnalyticsView = "map" | "chart" | "table";
 
 // A module is a collection of hazard-specific data and tools.
 export type Module = {
