@@ -25,6 +25,7 @@ export type Module = {
     description: string;
     rootIndicatorSlug?: string;
     views?: Partial<Record<AnalyticsView, Status>>;
+    isReportDownloadable?: boolean
 };
 
 export type State = {
